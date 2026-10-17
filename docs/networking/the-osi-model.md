@@ -91,7 +91,7 @@ When a frame arrives, the switch reads the **destination MAC address** and forwa
 **How does a switch know which port to send to?** It builds a **MAC address table** by learning:
 
 ```
-"Port 3 sent me a frame with source MAC AA:BB:CC... 
+"Port 3 sent me a frame with source MAC AA:BB:CC...
 so AA:BB:CC must be reachable via Port 3"
 ```
 

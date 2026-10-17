@@ -11,6 +11,7 @@ for (const name of ["SWE.md", "OOP-Java.md"]) {
   await cp(path.join(root, name), path.join(content, name))
 }
 await cp(path.join(root, "docs/networking"), path.join(content, "networking"), { recursive: true })
+await cp(path.join(root, "docs/aws"), path.join(content, "aws"), { recursive: true })
 await writeFile(path.join(content, "index.md"), `---
 title: BR9 Notes
 description: Concise course notes for quick revision.
@@ -22,6 +23,10 @@ description: Concise course notes for quick revision.
 - [[OOP-Java|Object-Oriented Programming and Java]]
 - [[networking/networks-summary|Computer Networks]]
 - [[networking/the-osi-model|The OSI Model]]
+
+## AWS
+
+[[aws/s3|S3]] · [[aws/vpc|VPC]] · [[aws/ec2|EC2]] · [[aws/cloudwatch|CloudWatch]] · [[aws/cloudformation|CloudFormation]] · [[aws/lambda|Lambda]] · [[aws/route-53|Route 53]]
 `)
 
 const entries = await readdir(content)
